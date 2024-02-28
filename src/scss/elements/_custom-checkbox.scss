@@ -1,0 +1,25 @@
+/* !checkbox  */
+.custom-checkbox {
+    background-color: #e6f7ff;
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  .checkbox-input {
+    margin-right: 10px;
+  }
+
+  .checkbox-label {
+    font-size: 14px;
+    color: #333;
+    display: flex;
+    align-items: center;
+  }
+
+  .info-icon {
+    font-size: 16px;
+    margin-left: 5px;
+    color: #007bff;
+  }
