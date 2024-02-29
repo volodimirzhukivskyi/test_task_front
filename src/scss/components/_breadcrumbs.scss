@@ -1,25 +1,37 @@
+$color_1: #697071;
+$color_2: #a3a3a3;
+$color_3: #042a30;
 .breadcrumbs {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   margin-bottom: 20px;
-}
+  &_link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: $color_1;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 100%;
+    text-transform: uppercase;
 
-.breadcrumbs a {
-  color: #000;
-  text-decoration: none;
-  font-size: 16px;
-}
-
-.breadcrumbs a:hover {
-  text-decoration: underline;
-}
-
-.breadcrumbs .separator {
-  margin: 0 8px;
-  color: #777;
-}
-
-.breadcrumbs span {
-  color: #777;
-  font-size: 16px;
+    &:hover {
+      text-decoration: underline;
+    }
+    &:not(:last-child):after {
+      content: url('../img/icons/right-arrow.svg');
+      margin-right: 8px;
+    }
+    &-bold {
+      color: $color_3;
+    }
+    &:disabled {
+      color: $color_2;
+      font-size: 16px;
+    }
+  }
 }

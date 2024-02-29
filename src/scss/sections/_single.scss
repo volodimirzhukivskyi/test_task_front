@@ -1,0 +1,12 @@
+.single {
+  &_title {
+    font-family: $third-family;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 100%;
+    color: #042a30;
+    &-hide {
+      display: none;
+    }
+  }
+}

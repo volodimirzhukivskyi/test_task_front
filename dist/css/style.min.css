@@ -6,6 +6,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
@@ -350,22 +351,32 @@ template {
 
 /* !checkbox  */
 .custom-checkbox {
-  background-color: #e6f7ff;
-  border-radius: 8px;
+  background-color: #e0ecf0;
   padding: 10px;
   display: flex;
   align-items: center;
+  font-family: "SF Pro Text", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 100%;
+  color: #292e2f;
 }
 
 .checkbox-input {
-  margin-right: 10px;
+  display: none;
 }
 
 .checkbox-label {
+  padding-left: 24px;
+  position: relative;
+  cursor: pointer;
   font-size: 14px;
   color: #333;
   display: flex;
+  justify-content: space-between;
+  width: 100%;
   align-items: center;
+  transition: all 0.2s ease-in-out;
 }
 
 .info-icon {
@@ -374,36 +385,175 @@ template {
   color: #007bff;
 }
 
+.checkbox-label::before {
+  content: "✓";
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  color: white;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  border: 1px solid #424849;
+  border-radius: 2px;
+  background-color: #fff;
+}
+
+.checkbox-label::after {
+  content: url("../img/icons/info.svg");
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.checkbox-input:checked + .checkbox-label::before {
+  background-color: #146b87;
+  color: #fff;
+}
+
 .breadcrumbs {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   margin-bottom: 20px;
 }
-
-.breadcrumbs a {
-  color: #000;
+.breadcrumbs_link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #697071;
   text-decoration: none;
   font-size: 16px;
+  font-family: "SF Pro Text", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+  text-transform: uppercase;
 }
-
-.breadcrumbs a:hover {
+.breadcrumbs_link:hover {
   text-decoration: underline;
 }
-
-.breadcrumbs .separator {
-  margin: 0 8px;
-  color: #777;
+.breadcrumbs_link:not(:last-child):after {
+  content: url("../img/icons/right-arrow.svg");
+  margin-right: 8px;
+}
+.breadcrumbs_link-bold {
+  color: #042a30;
+}
+.breadcrumbs_link:disabled {
+  color: #a3a3a3;
+  font-size: 16px;
 }
 
-.breadcrumbs span {
-  color: #777;
-  font-size: 16px;
+.mySwiper {
+  width: fit-content !important;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.multiselect {
+  position: relative;
+  display: inline-block;
+  width: 320px;
+}
+
+.multiselect-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #d6dcdd;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: left;
+  background-color: #f2f5f5;
+  color: #333;
+}
+.multiselect-button::after {
+  content: url("../img/icons/bottom-arrow.svg");
+}
+
+.multiselect-button .icon {
+  float: right;
+  margin-top: 2px;
+  margin-right: 5px;
+}
+
+.multiselect-options {
+  padding: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  max-height: 200px;
+  overflow: auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  display: none;
+}
+
+.multiselect-option {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.multiselect-option:hover {
+  background-color: #f5f5f5;
+}
+
+.multiselect.active .multiselect-options {
+  display: block;
+}
+
+.form fieldset {
+  border: none;
+  padding: 0;
+}
+.form legend {
+  font-family: "SF Pro Text", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 100%;
+  color: #292e2f;
+  margin-bottom: 8px;
+}
+.form legend:after {
+  content: url("../img/icons/info.svg");
+  display: inline-block;
+  margin-left: 8px;
 }
 
 .radio-buttons {
-  display: flex;
-  align-items: center;
+  width: 288px;
+  display: grid;
   margin-bottom: 20px;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
 }
 
 .radio-buttons input {
@@ -411,19 +561,32 @@ template {
 }
 
 .radio-buttons label {
-  margin: 0 8px;
-  padding: 4px 12px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: #e0ecf0;
   cursor: pointer;
+  font-family: "SF Pro Text", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 100%;
+  color: #292e2f;
+}
+.radio-buttons label:last-child {
+  grid-column: span 2;
+  width: 100%;
 }
 
 .radio-buttons label:hover {
-  background-color: #eee;
+  border: 1px solid #ddd;
 }
 
 .radio-buttons input:checked + label {
-  background-color: #ccc;
+  background: #146b87;
+  color: #fff;
 }
 
 .radio-buttons .custom-input {
@@ -463,9 +626,15 @@ template {
 
 /* SKU продукту */
 .product-sku {
+  font-family: "SF Pro Text", sans-serif;
+  font-weight: 600;
   font-size: 12px;
-  color: #999;
-  margin-bottom: 10px;
+  line-height: 100%;
+  margin-bottom: 12px;
+  color: #a5b1b2;
+}
+.product-sku_code {
+  color: #292e2f;
 }
 
 /* Назва продукту */
@@ -546,4 +715,15 @@ template {
   border-radius: 4px;
   background-color: #000;
   color: red;
+}
+
+.single_title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 100%;
+  color: #042a30;
+}
+.single_title-hide {
+  display: none;
 }

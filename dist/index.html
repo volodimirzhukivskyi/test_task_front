@@ -5,9 +5,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Practica</title>
+
   <link rel="stylesheet" href="css/style.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <script defer  src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script defer src="./js/app.min.js"></script>
 </head>
 
   <body>
@@ -21,90 +23,111 @@
         <section class="single">
   <div class="single_item">
     <div class="breadcrumbs">
-  <a href="#">Головна</a>
-  <span class="separator">›</span>
-  <a href="#">Транспортери</a>
-  <span class="separator">›</span>
-  <span>Похилі та спускні транспортери</span>
+  <a class="breadcrumbs_link breadcrumbs_link-bold" href="#">Home</a>
+  <a class="breadcrumbs_link" href="#">Conveyors</a>
+  <a disabled class="breadcrumbs_link">Incline & Decline Conveyors</a>
 </div>
+
+    <h1 class="single_title">Incline & Decline Conveyors</h1>
 
     <div>slider big</div>
     <div>slider small</div>
   </div>
-  <div class="single_item"><h1>Incline & Decline Conveyors</h1>
-    <form action="">
+  <div class="single_item">
+    <h1 class="single_title single_title-hide">Incline & Decline Conveyors</h1>
+    <form class="form" action="">
   <fieldset>
     <legend>Conveyor Belt Width, in</legend>
-    <div>
-      <div class="radio-buttons">
-        <input type="radio" id="size-10" name="size" value="10" checked />
-        <label for="size-10">10"</label>
+    <div class="radio-buttons">
+      <input type="radio" id="size-10" name="size" value="10" checked />
+      <label for="size-10">10"</label>
 
-        <input type="radio" id="size-18" name="size" value="18" />
-        <label for="size-18">18"</label>
+      <input type="radio" id="size-18" name="size" value="18" />
+      <label for="size-18">18"</label>
 
-        <input type="radio" id="size-24" name="size" value="24" />
-        <label for="size-24">24"</label>
+      <input type="radio" id="size-24" name="size" value="24" />
+      <label for="size-24">24"</label>
 
-        <input type="radio" id="size-30" name="size" value="30" />
-        <label for="size-30">30"</label>
+      <input type="radio" id="size-30" name="size" value="30" />
+      <label for="size-30">30"</label>
 
-        <input type="radio" id="size-36" name="size" value="36" />
-        <label for="size-36">36"</label>
+      <input type="radio" id="size-36" name="size" value="36" />
+      <label for="size-36">36"</label>
 
-        <input type="radio" id="size-42" name="size" value="42" />
-        <label for="size-42">42"</label>
+      <input type="radio" id="size-42" name="size" value="42" />
+      <label for="size-42">42"</label>
 
-        <input type="radio" id="size-48" name="size" value="48" />
-        <label for="size-48">48"</label>
+      <input type="radio" id="size-48" name="size" value="48" />
+      <label for="size-48">48"</label>
 
-        <input type="radio" id="size-54" name="size" value="54" />
-        <label for="size-54">54"</label>
+      <input type="radio" id="size-54" name="size" value="54" />
+      <label for="size-54">54"</label>
 
-        <input type="radio" id="size-custom" name="size" value="custom" />
-        <label for="size-custom">CUSTOM</label>
-      </div>
+      <input type="radio" id="size-custom" name="size" value="custom" />
+      <label for="size-custom">CUSTOM</label>
     </div>
   </fieldset>
   <fieldset>
-    <legend></legend>
-    <ul>
-      <li class="custom-checkbox">
-    <input type="checkbox" id="supportStructures" class="checkbox-input" />
-    <label for="supportStructures" class="checkbox-label">
-     Chain Driven Feeder
-      <span class="info-icon">i</span>
-    </label>
-  </li>
-      <li class="custom-checkbox">
-    <input type="checkbox" id="supportStructures" class="checkbox-input" />
-    <label for="supportStructures" class="checkbox-label">
-     Knee Braces
-      <span class="info-icon">i</span>
-    </label>
-  </li>
-      <li class="custom-checkbox">
-    <input type="checkbox" id="supportStructures" class="checkbox-input" />
-    <label for="supportStructures" class="checkbox-label">
-     ChainDriven Feeder
-      <span class="info-icon">i</span>
-    </label>
-  </li>
-      <li class="custom-checkbox">
-    <input type="checkbox" id="supportStructures" class="checkbox-input" />
-    <label for="supportStructures" class="checkbox-label">
-     Enhanced support
-      <span class="info-icon">i</span>
-    </label>
-  </li>
-    </ul>
-  </fieldset>
-  <fieldset class="product-card">
-    <div class="product-image">
-      <img src="https://example.com/image.jpg" alt="Product image" />
+    <legend>Bed Section Length, in</legend>
+    <div>
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">Slide 1</div>
+      <div class="swiper-slide">Slide 2</div>
+      <div class="swiper-slide">Slide 3</div>
+      <div class="swiper-slide">Slide 4</div>
+      <div class="swiper-slide">Slide 5</div>
+      <div class="swiper-slide">Slide 6</div>
+      <div class="swiper-slide">Slide 7</div>
+      <div class="swiper-slide">Slide 8</div>
+      <div class="swiper-slide">Slide 9</div>
     </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+</div>
+
+  </fieldset>
+  <fieldset>
+    <legend>Additional options</legend>
+    <div class="multiselect">
+  <button class="multiselect-button">
+    Select options
+    <span class="icon"></span>
+  </button>
+  <ul class="list multiselect-options">
+    <li class="custom-checkbox multiselect-option">
+    <input type="checkbox" id=Chain class="checkbox-input" />
+    <label for=Chain class="checkbox-label">
+     Chain Driven Feeder
+    </label>
+  </li>
+    <li class="custom-checkbox multiselect-option">
+    <input type="checkbox" id=Knee class="checkbox-input" />
+    <label for=Knee class="checkbox-label">
+     Knee Braces
+    </label>
+  </li>
+    <li class="custom-checkbox multiselect-option">
+    <input type="checkbox" id=ChainDriven class="checkbox-input" />
+    <label for=ChainDriven class="checkbox-label">
+     ChainDriven Feeder
+    </label>
+  </li>
+    <li class="custom-checkbox multiselect-option">
+    <input type="checkbox" id=Enhanced class="checkbox-input" />
+    <label for=Enhanced class="checkbox-label">
+     Enhanced support
+    </label>
+  </li>
+  </ul>
+</div>
+
+  </fieldset>
+
+  <fieldset class="product-card">
     <div class="product-info">
-      <div class="product-sku">SKU: WMD-2446F-GRYI</div>
+      <p class="product-sku">SKU: <span class="product-sku_code">WMD-2446F-GRYI</span></p>
       <div class="product-title">
         <h1>Product title</h1>
       </div>
@@ -127,7 +150,7 @@
   </fieldset>
 </form>
 
-
+  </div>
 </section>
 
 
