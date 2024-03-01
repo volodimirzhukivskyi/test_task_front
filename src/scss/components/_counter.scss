@@ -1,0 +1,100 @@
+.counter {
+  width: 320px;
+  display: flex;
+  gap: 20px;
+  & > [data-value='counter-value'] {
+    border: 1px solid #d6dcdd;
+    border-radius: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  & button {
+    border-radius: 8px;
+    padding: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    border: none;
+    min-height: 44px;
+  }
+}
+.product_counter {
+  margin-bottom: 24px;
+  & button {
+    background: white;
+    transition: 0.3s;
+    &:hover {
+      background: $btnProductHover;
+      transition: 0.3s;
+    }
+    &:hover .counter-decrement::after {
+      content: '';
+      background-color: white;
+    }
+    &:hover .counter_plus-container::after,
+    &:hover .counter_plus-container::before {
+      background-color: white;
+    }
+  }
+
+  & > [data-value='counter-decrement'] {
+    &:after {
+      content: '';
+      display: inline-block;
+      width: 16px;
+      height: 1px;
+      color: inherit;
+    }
+  }
+  & > [data-action='counter-decrement'] {
+    &:after {
+      content: '';
+
+      display: inline-block;
+      height: 1px;
+      width: 16px;
+      color: inherit;
+      background-color: black;
+      border-radius: 3px;
+    }
+    &:hover &:after {
+      content: '';
+      background-color: white;
+    }
+  }
+  & .counter_plus-container {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    &::after,
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      margin: auto;
+      display: inline-block;
+      background-color: black;
+      border-radius: 3px;
+    }
+    &::after {
+      right: 0;
+      height: 16px;
+      width: 1px;
+    }
+    &::before {
+      top: 0;
+      bottom: 0;
+      height: 1px;
+      width: 16px;
+    }
+  }
+}
+.size_counter {
+  & button {
+    background-color: #f2f5f5;
+  }
+  & [data-value='counter-value'] {
+    background: #f2f5f5;
+  }
+}

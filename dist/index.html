@@ -69,24 +69,16 @@
   </fieldset>
   <fieldset>
     <legend>Bed Section Length, in</legend>
-    <div>
-  <div class="swiper mySwiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">Slide 1</div>
-      <div class="swiper-slide">Slide 2</div>
-      <div class="swiper-slide">Slide 3</div>
-      <div class="swiper-slide">Slide 4</div>
-      <div class="swiper-slide">Slide 5</div>
-      <div class="swiper-slide">Slide 6</div>
-      <div class="swiper-slide">Slide 7</div>
-      <div class="swiper-slide">Slide 8</div>
-      <div class="swiper-slide">Slide 9</div>
+    <div class="size_counter counter">
+      <button type="button" class="counter-decrement" data-action="counter-decrement">
+        <img src="./img/icons/left_arrow-m.svg" alt="" />
+      </button>
+      <input type="number" data-value="counter-value" value="10" />
+      <button type="button" data-action="counter-increment">
+        <img src="./img/icons/right_arrow-m.svg" alt="" />
+      </button>
     </div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-  </div>
-</div>
-
+    
   </fieldset>
   <fieldset>
     <legend>Additional options</legend>
@@ -125,26 +117,22 @@
 
   </fieldset>
 
-  <fieldset class="product-card">
-    <div class="product-info">
-      <p class="product-sku">SKU: <span class="product-sku_code">WMD-2446F-GRYI</span></p>
-      <button class="product-button">
-        Upon request
-      </button>
-      <div class="product-rating">
-        <span class="stars">★★★★★</span>
-        <span class="reviews">(20)</span>
-        <a href="#">READ ></a>
+  <fieldset class="product_card">
+    <div class="product_info">
+      <p class="product_sku">SKU: <span class="product_sku_code">WMD-2446F-GRYI</span></p>
+      <div class="product_wrapper"><button class="product_button">Upon request</button> <a class="product_rating"> (20) </a></div>
+      <hr class="product_separator" />
+      <p class="product_price">$22360 <span class="product_part-element">EA</span></p>
+      <p class="product_text">*Final price is defined after a consultation with our specialist due to conveyor specifics of use.</p>
+
+      <div class="product_counter counter">
+        <button type="button" class="counter-decrement" data-action="counter-decrement"></button>
+        <input type="number" data-value="counter-value" value="10" />
+        <button type="button" data-action="counter-increment"><div class="counter_plus-container"></div></button>
       </div>
-      <div class="product-price">
-        <span class="from">FROM</span>
-        <span class="price">$22360 EA</span>
-      </div>
-      <div class="product-quantity">
-        <input type="number" value="1" min="1" />
-      </div>
-      <div class="product-action">
-        <button type="button">REQUEST</button>
+
+      <div class="product_action">
+        <button class="product_submit" type="submit"><img src="./img/icons/flag.svg" alt="" />REQUEST</button>
       </div>
     </div>
   </fieldset>

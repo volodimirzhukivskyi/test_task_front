@@ -315,6 +315,15 @@ template {
   box-sizing: border-box;
 }
 
+button,
+a {
+  cursor: pointer;
+}
+
+button {
+  border: none;
+}
+
 .button {
   padding: 14px 0 11px;
   min-width: 189px;
@@ -472,6 +481,99 @@ template {
   object-fit: cover;
 }
 
+.counter {
+  width: 320px;
+  display: flex;
+  gap: 20px;
+}
+.counter > [data-value=counter-value] {
+  border: 1px solid #d6dcdd;
+  border-radius: 8px;
+  width: 100%;
+  text-align: center;
+}
+.counter button {
+  border-radius: 8px;
+  padding: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  border: none;
+  min-height: 44px;
+}
+
+.product_counter {
+  margin-bottom: 24px;
+}
+.product_counter button {
+  background: white;
+  transition: 0.3s;
+}
+.product_counter button:hover {
+  background: #d6dcdd;
+  transition: 0.3s;
+}
+.product_counter button:hover .counter-decrement::after {
+  content: "";
+  background-color: white;
+}
+.product_counter button:hover .counter_plus-container::after, .product_counter button:hover .counter_plus-container::before {
+  background-color: white;
+}
+.product_counter > [data-value=counter-decrement]:after {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 1px;
+  color: inherit;
+}
+.product_counter > [data-action=counter-decrement]:after {
+  content: "";
+  display: inline-block;
+  height: 1px;
+  width: 16px;
+  color: inherit;
+  background-color: black;
+  border-radius: 3px;
+}
+.product_counter > [data-action=counter-decrement]:hover .product_counter > [data-action=counter-decrement]:after {
+  content: "";
+  background-color: white;
+}
+.product_counter .counter_plus-container {
+  position: relative;
+  width: 16px;
+  height: 16px;
+}
+.product_counter .counter_plus-container::after, .product_counter .counter_plus-container::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  margin: auto;
+  display: inline-block;
+  background-color: black;
+  border-radius: 3px;
+}
+.product_counter .counter_plus-container::after {
+  right: 0;
+  height: 16px;
+  width: 1px;
+}
+.product_counter .counter_plus-container::before {
+  top: 0;
+  bottom: 0;
+  height: 1px;
+  width: 16px;
+}
+
+.size_counter button {
+  background-color: #f2f5f5;
+}
+.size_counter [data-value=counter-value] {
+  background: #f2f5f5;
+}
+
 .multiselect {
   position: relative;
   display: inline-block;
@@ -535,6 +637,7 @@ template {
   padding: 0;
 }
 .form legend {
+  display: flex;
   font-family: "SF Pro Text", sans-serif;
   font-weight: 600;
   font-size: 14px;
@@ -597,35 +700,34 @@ template {
 
 /* style.css */
 /* Картка продукту */
-.product-card {
+.product_card {
   display: flex;
   flex-direction: column;
-  width: 300px;
   border: 1px solid #ddd;
   border-radius: 4px;
   margin-bottom: 20px;
 }
 
 /* Зображення продукту */
-.product-image {
+.product_image {
   width: 100%;
   height: 200px;
   overflow: hidden;
 }
 
-.product-image img {
+.product_image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
 /* Інформація про продукт */
-.product-info {
+.product_info {
   padding: 20px;
 }
 
 /* SKU продукту */
-.product-sku {
+.product_sku {
   font-family: "SF Pro Text", sans-serif;
   font-weight: 600;
   font-size: 12px;
@@ -633,22 +735,29 @@ template {
   margin-bottom: 12px;
   color: #a5b1b2;
 }
-.product-sku_code {
+.product_sku_code {
   color: #292e2f;
 }
 
 /* Назва продукту */
-.product-title {
+.product_title {
   margin-bottom: 10px;
 }
 
-.product-title h1 {
+.product_title h1 {
   font-size: 16px;
   font-weight: bold;
   margin: 0;
 }
 
-.product-button {
+.product_wrapper {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.product_button {
   display: flex;
   align-items: center;
   border-radius: 4px;
@@ -662,60 +771,102 @@ template {
   color: #fff;
   border: none;
 }
-.product-button::before {
+.product_button::before {
   content: url("../img/icons/check-icon.svg");
   margin-right: 4px;
 }
 
 /* Рейтинг продукту */
-.product-rating {
-  display: flex;
+.product_rating {
+  display: grid;
+  grid-template-columns: min-content min-content 1fr;
   align-items: center;
-  margin-bottom: 10px;
+  gap: 8px;
+  border-radius: 4px;
+  padding: 8px 12px;
+  background: #ffdfd7;
+  color: #f1582b;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+.product_rating:before {
+  content: "★★★★★";
+  color: inherit;
+}
+.product_rating:after {
+  content: url("../img/icons/right_arrow-s.svg");
+  justify-self: flex-end;
 }
 
-.product-rating .stars {
+.product_separator {
+  height: 1px;
+  background: #d6dcdd;
+  border: none;
+  margin: 0 0 32px;
+}
+
+.product_rating .stars {
   color: #f00;
   margin-right: 5px;
 }
 
-.product-rating .reviews {
+.product_rating .reviews {
   font-size: 12px;
   color: #999;
   margin-right: 5px;
 }
 
-.product-rating a {
+.product_rating a {
   font-size: 12px;
   color: #000;
   text-decoration: underline;
 }
 
 /* Ціна продукту */
-.product-price {
+.product_price {
   display: flex;
-  align-items: center;
+  gap: 5px;
+  align-items: baseline;
   margin-bottom: 10px;
+  font-family: "SF Pro Text", sans-serif;
+  font-size: 20px;
+  color: #146b87;
+  font-weight: 700;
+  text-transform: uppercase;
 }
-
-.product-price .from {
+.product_price:before {
+  content: "FROM";
   font-size: 12px;
-  color: #999;
-  margin-right: 5px;
+  font-size: 10px;
+  color: #697071;
+}
+.product_price:after {
+  content: "*";
+  color: #146b87;
 }
 
-.product-price .price {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
+.product_text {
+  font-family: "SF Pro Text", sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 120%;
+  color: #697071;
+}
+
+.product_part-element {
+  font-size: 10px;
+  color: #146b87;
 }
 
 /* Кількість продукту */
-.product-quantity {
+.product_quantity {
   margin-bottom: 10px;
 }
 
-.product-quantity input {
+.product_quantity input {
   width: 50px;
   padding: 5px;
   border: 1px solid #ddd;
@@ -723,17 +874,26 @@ template {
 }
 
 /* Дія продукту */
-.product-action {
+.product_action {
   text-align: center;
 }
 
-.product-action button {
+.product_submit {
+  border-radius: 8px;
+  padding: 14px 40px;
   width: 100%;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  background-color: #000;
-  color: red;
+  background: #f1582b;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 100%;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
 }
 
 .single_title {

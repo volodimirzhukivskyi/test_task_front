@@ -4,6 +4,7 @@
     padding: 0;
   }
   & legend {
+    display: flex;
     font-family: $font-family;
     font-weight: 600;
     font-size: 14px;
@@ -70,35 +71,34 @@
 //   othe components
 /* style.css */
 /* Картка продукту */
-.product-card {
+.product_card {
   display: flex;
   flex-direction: column;
-  width: 300px;
   border: 1px solid #ddd;
   border-radius: 4px;
   margin-bottom: 20px;
 }
 
 /* Зображення продукту */
-.product-image {
+.product_image {
   width: 100%;
   height: 200px;
   overflow: hidden;
 }
 
-.product-image img {
+.product_image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
 /* Інформація про продукт */
-.product-info {
+.product_info {
   padding: 20px;
 }
 
 /* SKU продукту */
-.product-sku {
+.product_sku {
   font-family: $font-family;
   font-weight: 600;
   font-size: 12px;
@@ -111,16 +111,22 @@
 }
 
 /* Назва продукту */
-.product-title {
+.product_title {
   margin-bottom: 10px;
 }
 
-.product-title h1 {
+.product_title h1 {
   font-size: 16px;
   font-weight: bold;
   margin: 0;
 }
-.product-button {
+.product_wrapper {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+.product_button {
   display: flex;
   align-items: center;
   border-radius: 4px;
@@ -139,54 +145,93 @@
   }
 }
 /* Рейтинг продукту */
-.product-rating {
-  display: flex;
+.product_rating {
+  display: grid;
+  grid-template-columns: min-content min-content 1fr;
   align-items: center;
-  margin-bottom: 10px;
+  gap: 8px;
+  border-radius: 4px;
+  padding: 8px 12px;
+  background: #ffdfd7;
+  color: #f1582b;
+  font-family: $second-family;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 100%;
+  text-transform: uppercase;
+  &:before {
+    content: '★★★★★';
+    color: inherit;
+  }
+  &:after {
+    content: url('../img/icons/right_arrow-s.svg');
+    justify-self: flex-end;
+  }
 }
-
-.product-rating .stars {
+.product_separator {
+  height: 1px;
+  background: #d6dcdd;
+  border: none;
+  margin: 0 0 32px;
+}
+.product_rating .stars {
   color: #f00;
   margin-right: 5px;
 }
 
-.product-rating .reviews {
+.product_rating .reviews {
   font-size: 12px;
   color: #999;
   margin-right: 5px;
 }
 
-.product-rating a {
+.product_rating a {
   font-size: 12px;
   color: #000;
   text-decoration: underline;
 }
 
 /* Ціна продукту */
-.product-price {
+.product_price {
   display: flex;
-  align-items: center;
+  gap: 5px;
+  align-items: baseline;
   margin-bottom: 10px;
-}
+  font-family: $font-family;
+  font-size: 20px;
+  color: #146b87;
+  font-weight: 700;
+  text-transform: uppercase;
+  &:before {
+    content: 'FROM';
+    font-size: 12px;
+    font-size: 10px;
+    color: #697071;
+  }
+  &:after {
+    content: '*';
 
-.product-price .from {
-  font-size: 12px;
-  color: #999;
-  margin-right: 5px;
+    color: #146b87;
+  }
 }
-
-.product-price .price {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
+.product_text {
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 120%;
+  color: #697071;
+}
+.product_part-element {
+  font-size: 10px;
+  color: #146b87;
 }
 
 /* Кількість продукту */
-.product-quantity {
+.product_quantity {
   margin-bottom: 10px;
 }
 
-.product-quantity input {
+.product_quantity input {
   width: 50px;
   padding: 5px;
   border: 1px solid #ddd;
@@ -194,15 +239,32 @@
 }
 
 /* Дія продукту */
-.product-action {
+.product_action {
   text-align: center;
 }
 
-.product-action button {
+// .product_action button {
+//   width: 100%;
+//   padding: 10px;
+//   border: 1px solid #ddd;
+//   border-radius: 4px;
+//   background-color: #000;
+//   color: red;
+// }
+.product_submit {
+  border-radius: 8px;
+  padding: 14px 40px;
   width: 100%;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  background-color: #000;
-  color: red;
+  background: #f1582b;
+  font-family: $third-family;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 100%;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
 }

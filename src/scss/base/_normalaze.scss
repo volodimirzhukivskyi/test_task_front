@@ -352,7 +352,10 @@ template {
 * {
   box-sizing: border-box;
 }
-button,a{
-cursor:pointer;
-
+button,
+a {
+  cursor: pointer;
+}
+button {
+  border: none;
 }
