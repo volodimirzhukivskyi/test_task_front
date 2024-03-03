@@ -1,69 +1,76 @@
 <form class="form" action="">
-  <fieldset>
-    <legend>Conveyor Belt Width, in</legend>
-    <div class="radio-buttons">
-      <input type="radio" id="size-10" name="size" value="10" checked />
-      <label for="size-10">10"</label>
+  <div class="container">
+    <!-- radio bnts -->
+    <fieldset class="form_wrapper">
+      <legend>Conveyor Belt Width, in</legend>
+      <div class="radio-buttons">
+        <input type="radio" id="size-10" name="size" value="10" checked />
+        <label for="size-10">10"</label>
 
-      <input type="radio" id="size-18" name="size" value="18" />
-      <label for="size-18">18"</label>
+        <input type="radio" id="size-18" name="size" value="18" />
+        <label for="size-18">18"</label>
 
-      <input type="radio" id="size-24" name="size" value="24" />
-      <label for="size-24">24"</label>
+        <input type="radio" id="size-24" name="size" value="24" />
+        <label for="size-24">24"</label>
 
-      <input type="radio" id="size-30" name="size" value="30" />
-      <label for="size-30">30"</label>
+        <input type="radio" id="size-30" name="size" value="30" />
+        <label for="size-30">30"</label>
 
-      <input type="radio" id="size-36" name="size" value="36" />
-      <label for="size-36">36"</label>
+        <input type="radio" id="size-36" name="size" value="36" />
+        <label for="size-36">36"</label>
 
-      <input type="radio" id="size-42" name="size" value="42" />
-      <label for="size-42">42"</label>
+        <input type="radio" id="size-42" name="size" value="42" />
+        <label for="size-42">42"</label>
 
-      <input type="radio" id="size-48" name="size" value="48" />
-      <label for="size-48">48"</label>
+        <input type="radio" id="size-48" name="size" value="48" />
+        <label for="size-48">48"</label>
 
-      <input type="radio" id="size-54" name="size" value="54" />
-      <label for="size-54">54"</label>
+        <input type="radio" id="size-54" name="size" value="54" />
+        <label for="size-54">54"</label>
 
-      <input type="radio" id="size-custom" name="size" value="custom" />
-      <label for="size-custom">CUSTOM</label>
-    </div>
-  </fieldset>
-  <fieldset>
-    <legend>Bed Section Length, in</legend>
-    <div class="size_counter counter">
-      <button type="button" class="counter-decrement" data-action="counter-decrement">
-        <img src="./img/icons/left_arrow-m.svg" alt="" />
-      </button>
-      <input type="number" data-value="counter-value" value="10" />
-      <button type="button" data-action="counter-increment">
-        <img src="./img/icons/right_arrow-m.svg" alt="" />
-      </button>
-    </div>
-    <!-- @@include('../components/form-slider.html') -->
-  </fieldset>
-  <fieldset>
-    <legend>Additional options</legend>
-    @@include('./select-options.html')
-  </fieldset>
-
-  <fieldset class="product_card">
-    <div class="product_info">
-      <p class="product_sku">SKU: <span class="product_sku_code">WMD-2446F-GRYI</span></p>
-      <div class="product_wrapper"><button class="product_button">Upon request</button> <a class="product_rating"> (20) </a></div>
-      <hr class="product_separator" />
-      <p class="product_price">$22360 <span class="product_part-element">EA</span></p>
-      <p class="product_text">*Final price is defined after a consultation with our specialist due to conveyor specifics of use.</p>
-
-      <div class="product_counter counter">
-        <button type="button" class="counter-decrement" data-action="counter-decrement"></button>
-        <input type="number" data-value="counter-value" value="10" />
-        <button type="button" data-action="counter-increment"><div class="counter_plus-container"></div></button>
+        <input type="radio" id="size-custom" name="size" value="custom" />
+        <label for="size-custom">CUSTOM</label>
       </div>
+    </fieldset>
+    <div class="selects-wrapper">
+      <fieldset class="form_wrapper">
+        <legend>Bed Section Length, in</legend>
+        <div class="size_counter counter">
+          <button type="button" class="counter-decrement" data-action="counter-decrement">
+            <img src="./img/icons/left_arrow-m.svg" alt="" />
+          </button>
+          <input type="number" data-value="counter-value" value="10" />
+          <button type="button" data-action="counter-increment">
+            <img src="./img/icons/right_arrow-m.svg" alt="" />
+          </button>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Additional options</legend>
+        @@include('./select-options.html')
+      </fieldset>
+    </div>
+  </div>
+  <fieldset class="product_card container">
+    <div class="product_info">
+      <div class="prduct_info-wrapper">
+        <p class="product_sku">SKU: <span class="product_sku_code">WMD-2446F-GRYI</span></p>
+        <div class="product_wrapper"><button class="product_button">Upon request</button> <a class="product_rating"> (20) </a></div>
+      </div>
+      <hr class="product_separator" />
+      <div class="prduct_info-wrapper">
+        <p class="product_price">$22360 <span class="product_part-element">EA</span></p>
+        <p class="product_text">*Final price is defined after a consultation with our specialist due to conveyor specifics of use.</p>
 
-      <div class="product_action">
-        <button class="product_submit" type="submit"><img src="./img/icons/flag.svg" alt="" />REQUEST</button>
+        <div class="product_counter counter">
+          <button type="button" class="counter-decrement" data-action="counter-decrement"></button>
+          <input type="number" data-value="counter-value" value="10" />
+          <button type="button" data-action="counter-increment"><div class="counter_plus-container"></div></button>
+        </div>
+
+        <div class="product_action">
+          <button class="product_submit" type="submit"><img src="./img/icons/flag.svg" alt="" />REQUEST</button>
+        </div>
       </div>
     </div>
   </fieldset>

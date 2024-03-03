@@ -5,9 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Practica</title>
-
-  <link rel="stylesheet" href="css/style.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/style.min.css" />
+
   <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script defer src="./js/app.min.js"></script>
 </head>
@@ -22,67 +22,94 @@
 
         <section class="single">
   <div class="single_item">
-    <div class="breadcrumbs">
+    <div class="container">
+      <div class="breadcrumbs">
   <a class="breadcrumbs_link breadcrumbs_link-bold" href="#">Home</a>
   <a class="breadcrumbs_link" href="#">Conveyors</a>
   <a disabled class="breadcrumbs_link">Incline & Decline Conveyors</a>
 </div>
 
-    <h1 class="single_title">Incline & Decline Conveyors</h1>
-
-    <div>slider big</div>
-    <div>slider small</div>
+      <h1 class="single_title">Incline & Decline Conveyors</h1>
+    </div>
+    <div class="product-left">
+  <div class="swiper-container product-slider mb-3">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="./img/products/slide-one.png" alt="" /></div>
+      <div class="swiper-slide"><img src="./img/products/slide-two.png" alt="" /></div>
+      <div class="swiper-slide"><img src="./img/products/slide-three.png" alt="" /></div>
+      <div class="swiper-slide"><img src="./img/products/slide-four.png" alt="" /></div>
+      <div class="swiper-slide"><img src="./img/products/slide-five.png" alt="" /></div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
   </div>
-  <div class="single_item">
+
+  <div class="swiper- product-thumbs">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="./img/products/slide-one.png" alt="" /></div>
+      <div class="swiper-slide"><img src="./img/products/slide-two.png" alt="" /></div>
+      <div class="swiper-slide"><img src="./img/products/slide-three.png" alt="" /></div>
+      <div class="swiper-slide"><img src="./img/products/slide-four.png" alt="" /></div>
+      <div class="swiper-slide"><img src="./img/products/slide-five.png" alt="" /></div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+</div>
+
+  </div>
+  <div class="single_item single_item-second">
     <h1 class="single_title single_title-hide">Incline & Decline Conveyors</h1>
     <form class="form" action="">
-  <fieldset>
-    <legend>Conveyor Belt Width, in</legend>
-    <div class="radio-buttons">
-      <input type="radio" id="size-10" name="size" value="10" checked />
-      <label for="size-10">10"</label>
+  <div class="container">
+    <!-- radio bnts -->
+    <fieldset class="form_wrapper">
+      <legend>Conveyor Belt Width, in</legend>
+      <div class="radio-buttons">
+        <input type="radio" id="size-10" name="size" value="10" checked />
+        <label for="size-10">10"</label>
 
-      <input type="radio" id="size-18" name="size" value="18" />
-      <label for="size-18">18"</label>
+        <input type="radio" id="size-18" name="size" value="18" />
+        <label for="size-18">18"</label>
 
-      <input type="radio" id="size-24" name="size" value="24" />
-      <label for="size-24">24"</label>
+        <input type="radio" id="size-24" name="size" value="24" />
+        <label for="size-24">24"</label>
 
-      <input type="radio" id="size-30" name="size" value="30" />
-      <label for="size-30">30"</label>
+        <input type="radio" id="size-30" name="size" value="30" />
+        <label for="size-30">30"</label>
 
-      <input type="radio" id="size-36" name="size" value="36" />
-      <label for="size-36">36"</label>
+        <input type="radio" id="size-36" name="size" value="36" />
+        <label for="size-36">36"</label>
 
-      <input type="radio" id="size-42" name="size" value="42" />
-      <label for="size-42">42"</label>
+        <input type="radio" id="size-42" name="size" value="42" />
+        <label for="size-42">42"</label>
 
-      <input type="radio" id="size-48" name="size" value="48" />
-      <label for="size-48">48"</label>
+        <input type="radio" id="size-48" name="size" value="48" />
+        <label for="size-48">48"</label>
 
-      <input type="radio" id="size-54" name="size" value="54" />
-      <label for="size-54">54"</label>
+        <input type="radio" id="size-54" name="size" value="54" />
+        <label for="size-54">54"</label>
 
-      <input type="radio" id="size-custom" name="size" value="custom" />
-      <label for="size-custom">CUSTOM</label>
-    </div>
-  </fieldset>
-  <fieldset>
-    <legend>Bed Section Length, in</legend>
-    <div class="size_counter counter">
-      <button type="button" class="counter-decrement" data-action="counter-decrement">
-        <img src="./img/icons/left_arrow-m.svg" alt="" />
-      </button>
-      <input type="number" data-value="counter-value" value="10" />
-      <button type="button" data-action="counter-increment">
-        <img src="./img/icons/right_arrow-m.svg" alt="" />
-      </button>
-    </div>
-    
-  </fieldset>
-  <fieldset>
-    <legend>Additional options</legend>
-    <div class="multiselect">
+        <input type="radio" id="size-custom" name="size" value="custom" />
+        <label for="size-custom">CUSTOM</label>
+      </div>
+    </fieldset>
+    <div class="selects-wrapper">
+      <fieldset class="form_wrapper">
+        <legend>Bed Section Length, in</legend>
+        <div class="size_counter counter">
+          <button type="button" class="counter-decrement" data-action="counter-decrement">
+            <img src="./img/icons/left_arrow-m.svg" alt="" />
+          </button>
+          <input type="number" data-value="counter-value" value="10" />
+          <button type="button" data-action="counter-increment">
+            <img src="./img/icons/right_arrow-m.svg" alt="" />
+          </button>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Additional options</legend>
+        <div class="multiselect">
   <button class="multiselect-button">
     Select options
     <span class="icon"></span>
@@ -115,24 +142,29 @@
   </ul>
 </div>
 
-  </fieldset>
-
-  <fieldset class="product_card">
+      </fieldset>
+    </div>
+  </div>
+  <fieldset class="product_card container">
     <div class="product_info">
-      <p class="product_sku">SKU: <span class="product_sku_code">WMD-2446F-GRYI</span></p>
-      <div class="product_wrapper"><button class="product_button">Upon request</button> <a class="product_rating"> (20) </a></div>
-      <hr class="product_separator" />
-      <p class="product_price">$22360 <span class="product_part-element">EA</span></p>
-      <p class="product_text">*Final price is defined after a consultation with our specialist due to conveyor specifics of use.</p>
-
-      <div class="product_counter counter">
-        <button type="button" class="counter-decrement" data-action="counter-decrement"></button>
-        <input type="number" data-value="counter-value" value="10" />
-        <button type="button" data-action="counter-increment"><div class="counter_plus-container"></div></button>
+      <div class="prduct_info-wrapper">
+        <p class="product_sku">SKU: <span class="product_sku_code">WMD-2446F-GRYI</span></p>
+        <div class="product_wrapper"><button class="product_button">Upon request</button> <a class="product_rating"> (20) </a></div>
       </div>
+      <hr class="product_separator" />
+      <div class="prduct_info-wrapper">
+        <p class="product_price">$22360 <span class="product_part-element">EA</span></p>
+        <p class="product_text">*Final price is defined after a consultation with our specialist due to conveyor specifics of use.</p>
 
-      <div class="product_action">
-        <button class="product_submit" type="submit"><img src="./img/icons/flag.svg" alt="" />REQUEST</button>
+        <div class="product_counter counter">
+          <button type="button" class="counter-decrement" data-action="counter-decrement"></button>
+          <input type="number" data-value="counter-value" value="10" />
+          <button type="button" data-action="counter-increment"><div class="counter_plus-container"></div></button>
+        </div>
+
+        <div class="product_action">
+          <button class="product_submit" type="submit"><img src="./img/icons/flag.svg" alt="" />REQUEST</button>
+        </div>
       </div>
     </div>
   </fieldset>

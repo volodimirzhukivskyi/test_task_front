@@ -29,9 +29,8 @@ $color_3: #042a30;
     &-bold {
       color: $color_3;
     }
-    &:disabled {
+    &:last-child {
       color: $color_2;
-      font-size: 16px;
     }
   }
 }

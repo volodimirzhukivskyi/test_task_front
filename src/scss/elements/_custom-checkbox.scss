@@ -57,9 +57,7 @@
   margin-left: 5px;
 }
 .checkbox-input:checked + .checkbox-label::before {
+  content: '\2713';
   background-color: $bginputsHover;
-  color: #fff;
+  color: black;
 }
-// .checkbox-input:checked + .checkbox-label {
-//   color: #fff;
-// }

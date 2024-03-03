@@ -1,5 +1,9 @@
-@import "normalaze";
-@import "mixin";
-@import "fonts";
-@import "header";
-@import "footer"
+@import 'normalaze';
+@import 'mixin';
+@import 'fonts';
+.container {
+  max-width: 1200px;
+  padding: 0 20px;
+}
+@import 'header';
+@import 'footer';

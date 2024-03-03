@@ -1,4 +1,8 @@
 .single {
+  padding-top: 32px;
+  @include _992 {
+    display: flex;
+  }
   &_title {
     font-family: $third-family;
     font-weight: 700;
@@ -7,6 +11,12 @@
     color: #042a30;
     &-hide {
       display: none;
+    }
+  }
+
+  &_item {
+    @include _992 {
+      flex: 1;
     }
   }
 }

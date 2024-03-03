@@ -16,6 +16,7 @@
   text-align: left;
   background-color: $btnBackground;
   color: #333;
+  margin-bottom: 40px;
   &::after {
     content: url('../img/icons/bottom-arrow.svg');
   }

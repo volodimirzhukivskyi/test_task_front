@@ -7,9 +7,9 @@ button.addEventListener('click', (e) => {
   multiselect.classList.toggle('active');
 });
 
-// options.addEventListener('click', (event) => {
-//   const checkbox = event.target.closest('input[type="checkbox"]');
-//   if (checkbox) {
-//     checkbox.checked = !checkbox.checked;
-//   }
-// });
+options.addEventListener('click', (event) => {
+  const checkbox = event.target.closest('input[type="checkbox"]');
+  if (checkbox) {
+    checkbox.checked = !checkbox.checked;
+  }
+});

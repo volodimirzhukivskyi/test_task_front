@@ -324,6 +324,11 @@ button {
   border: none;
 }
 
+.container {
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
 .button {
   padding: 14px 0 11px;
   min-width: 189px;
@@ -418,8 +423,9 @@ button {
 }
 
 .checkbox-input:checked + .checkbox-label::before {
+  content: "✓";
   background-color: #146b87;
-  color: #fff;
+  color: black;
 }
 
 .breadcrumbs {
@@ -451,13 +457,8 @@ button {
 .breadcrumbs_link-bold {
   color: #042a30;
 }
-.breadcrumbs_link:disabled {
+.breadcrumbs_link:last-child {
   color: #a3a3a3;
-  font-size: 16px;
-}
-
-.mySwiper {
-  width: fit-content !important;
 }
 
 .swiper {
@@ -481,9 +482,51 @@ button {
   object-fit: cover;
 }
 
+.product-left {
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 992px) {
+  .product-left {
+    max-width: 652px;
+  }
+}
+
+.product-thumbs .swiper-slide img {
+  border: 1px solid transparent;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 8px;
+  width: 70px;
+  height: 48px;
+  min-width: 100%;
+}
+.product-thumbs .swiper-slide-active img {
+  border-color: #a3c0c5;
+}
+.product-thumbs .swiper-button-next, .product-thumbs .swiper-button-prev {
+  display: none;
+}
+.product-thumbs .swiper-wrapper {
+  gap: 8px;
+}
+
+.product-slider {
+  margin-bottom: 12px;
+}
+.product-slider .swiper-button-next:after, .product-slider .swiper-button-prev:after {
+  font-size: 20px;
+  color: #000;
+  font-weight: bold;
+}
+.product-slider .swiper-button-next, .product-slider .swiper-button-prev {
+  display: none;
+}
+
 .counter {
   width: 320px;
   display: flex;
+  margin: 0 auto;
   gap: 20px;
 }
 .counter > [data-value=counter-value] {
@@ -514,10 +557,6 @@ button {
   background: #d6dcdd;
   transition: 0.3s;
 }
-.product_counter button:hover .counter-decrement::after {
-  content: "";
-  background-color: white;
-}
 .product_counter button:hover .counter_plus-container::after, .product_counter button:hover .counter_plus-container::before {
   background-color: white;
 }
@@ -528,7 +567,7 @@ button {
   height: 1px;
   color: inherit;
 }
-.product_counter > [data-action=counter-decrement]:after {
+.product_counter > [data-action=counter-decrement]::after {
   content: "";
   display: inline-block;
   height: 1px;
@@ -537,9 +576,8 @@ button {
   background-color: black;
   border-radius: 3px;
 }
-.product_counter > [data-action=counter-decrement]:hover .product_counter > [data-action=counter-decrement]:after {
-  content: "";
-  background-color: white;
+.product_counter > [data-action=counter-decrement]:hover::after {
+  background: white;
 }
 .product_counter .counter_plus-container {
   position: relative;
@@ -592,6 +630,7 @@ button {
   text-align: left;
   background-color: #f2f5f5;
   color: #333;
+  margin-bottom: 40px;
 }
 .multiselect-button::after {
   content: url("../img/icons/bottom-arrow.svg");
@@ -632,6 +671,17 @@ button {
   display: block;
 }
 
+@media screen and (min-width: 992px) {
+  .form {
+    display: flex;
+  }
+}
+.form_wrapper {
+  margin-bottom: 32px;
+}
+.form_first-part {
+  padding-bottom: 40px;
+}
 .form fieldset {
   border: none;
   padding: 0;
@@ -652,11 +702,20 @@ button {
 }
 
 .radio-buttons {
-  width: 288px;
   display: grid;
-  margin-bottom: 20px;
   grid-template-columns: repeat(5, 1fr);
   gap: 16px;
+}
+
+.radio-buttons_wrapper {
+  margin-bottom: 32px;
+}
+
+.selects-wrapper {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .radio-buttons input {
@@ -668,7 +727,7 @@ button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
+  width: 100%;
   height: 44px;
   background: #e0ecf0;
   cursor: pointer;
@@ -680,7 +739,10 @@ button {
 }
 .radio-buttons label:last-child {
   grid-column: span 2;
-  width: 100%;
+}
+
+.radio-buttons label::after {
+  content: "<span class=" icon ">&#10004;</span>";
 }
 
 .radio-buttons label:hover {
@@ -706,6 +768,9 @@ button {
   border: 1px solid #ddd;
   border-radius: 4px;
   margin-bottom: 20px;
+  background: #f2f5f5;
+  border-radius: 8px;
+  padding: 0 20px;
 }
 
 /* Зображення продукту */
@@ -719,11 +784,6 @@ button {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-/* Інформація про продукт */
-.product_info {
-  padding: 20px;
 }
 
 /* SKU продукту */
@@ -805,7 +865,7 @@ button {
   height: 1px;
   background: #d6dcdd;
   border: none;
-  margin: 0 0 32px;
+  margin-bottom: 32px;
 }
 
 .product_rating .stars {
@@ -896,6 +956,19 @@ button {
   gap: 8px;
 }
 
+.prduct_info-wrapper {
+  max-width: 360px;
+  margin: 0 auto;
+}
+
+.single {
+  padding-top: 32px;
+}
+@media screen and (min-width: 992px) {
+  .single {
+    display: flex;
+  }
+}
 .single_title {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
@@ -905,4 +978,9 @@ button {
 }
 .single_title-hide {
   display: none;
+}
+@media screen and (min-width: 992px) {
+  .single_item {
+    flex: 1;
+  }
 }

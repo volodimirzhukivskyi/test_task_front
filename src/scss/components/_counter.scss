@@ -1,6 +1,7 @@
 .counter {
   width: 320px;
   display: flex;
+  margin: 0 auto;
   gap: 20px;
   & > [data-value='counter-value'] {
     border: 1px solid #d6dcdd;
@@ -28,10 +29,7 @@
       background: $btnProductHover;
       transition: 0.3s;
     }
-    &:hover .counter-decrement::after {
-      content: '';
-      background-color: white;
-    }
+
     &:hover .counter_plus-container::after,
     &:hover .counter_plus-container::before {
       background-color: white;
@@ -48,7 +46,7 @@
     }
   }
   & > [data-action='counter-decrement'] {
-    &:after {
+    &::after {
       content: '';
 
       display: inline-block;
@@ -58,9 +56,8 @@
       background-color: black;
       border-radius: 3px;
     }
-    &:hover &:after {
-      content: '';
-      background-color: white;
+    &:hover::after {
+      background: white;
     }
   }
   & .counter_plus-container {
