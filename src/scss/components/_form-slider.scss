@@ -18,38 +18,42 @@
   height: 100%;
   object-fit: cover;
 }
+.swiper-pagination {
+  font-family: $second-family;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: #042a30;
+  top: 16px;
+  left: 16px;
+  width: auto;
+}
+.swiper-container {
+  position: relative;
+}
 .product-left {
+  position: relative;
   overflow: hidden;
   margin-bottom: 40px;
   @include _992 {
-    max-width: 652px;
+    max-width: 94%;
+  }
+  &_wrapper {
+    display: none;
+    grid-template-columns: 44px 44px;
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    gap: 32px;
+    @include _992 {
+      display: grid;
+    }
+    & button {
+      position: relative;
+    }
   }
 }
-// .swiper-pagination {
-//   bottom: 0;
-// }
-// .swiper-pagination-bullet {
-//   border: 1px solid #ecf2f3;
-//   border-radius: 8px;
-//   width: 70px;
-//   height: 48px;
-// }
-
-// .mySwiper-small {
-//   & .swiper-wrapper {
-//     gap: 8px;
-//   }
-//   & .swiper-slide img {
-//     border: 1px solid #ecf2f3;
-//     border-radius: 8px;
-//     width: 70px;
-//     height: 48px;
-//     min-width: 100%;
-//   }
-//   & .swiper-slide-active img {
-//     border-color: red;
-//   }
-// }
 
 .product-thumbs {
   & .swiper-slide img {
@@ -57,11 +61,14 @@
     object-fit: cover;
     cursor: pointer;
     border-radius: 8px;
-    width: 70px;
+    width: auto;
     height: 48px;
     min-width: 100%;
+    @include _992 {
+      height: 72px;
+    }
   }
-  & .swiper-slide-active img {
+  & .swiper-slide-thumb-active img {
     border-color: #a3c0c5;
   }
   & .swiper-button-next,
@@ -70,6 +77,25 @@
   }
   & .swiper-wrapper {
     gap: 8px;
+  }
+  @include _992 {
+    & .swiper-button-next,
+    & .swiper-button-prev {
+      display: block;
+      padding: 0;
+      min-width: auto;
+      min-height: 100%;
+      display: flex;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+    }
+    & .swiper-button-next:after,
+    & .swiper-button-prev:after {
+      font-size: 20px;
+      color: #000;
+      font-weight: bold;
+    }
   }
 }
 .product-slider {
@@ -83,5 +109,11 @@
   & .swiper-button-next,
   & .swiper-button-prev {
     display: none;
+  }
+  @include _992 {
+    & .swiper-button-next,
+    & .swiper-button-prev {
+      display: block;
+    }
   }
 }

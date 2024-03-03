@@ -1,5 +1,6 @@
 .counter {
-  width: 320px;
+  max-width: 320px;
+  width: 100%;
   display: flex;
   margin: 0 auto;
   gap: 20px;
@@ -36,15 +37,7 @@
     }
   }
 
-  & > [data-value='counter-decrement'] {
-    &:after {
-      content: '';
-      display: inline-block;
-      width: 16px;
-      height: 1px;
-      color: inherit;
-    }
-  }
+  
   & > [data-action='counter-decrement'] {
     &::after {
       content: '';

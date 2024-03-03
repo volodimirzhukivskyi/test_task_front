@@ -2,6 +2,9 @@
   position: relative;
   display: inline-block;
   width: 320px;
+  @include _992 {
+    width: 100%;
+  }
 }
 
 .multiselect-button {
@@ -16,9 +19,12 @@
   text-align: left;
   background-color: $btnBackground;
   color: #333;
-  margin-bottom: 40px;
+  font-family: $font-family;
   &::after {
     content: url('../img/icons/bottom-arrow.svg');
+  }
+  @include _992 {
+    display: none;
   }
 }
 
@@ -35,32 +41,28 @@
   left: 0;
   width: 100%;
   max-height: 200px;
-  overflow: auto;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  gap: 4px;
+  flex-direction: column;
   background-color: #fff;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+
   display: none;
+  @include _992 {
+    position: relative;
+    display: flex;
+  }
 }
 
 .multiselect-option {
   padding: 10px;
-  border-bottom: 1px solid #ccc;
   cursor: pointer;
+  border-radius: 8px;
 }
 
 .multiselect-option:hover {
   background-color: #f5f5f5;
 }
 
-// .multiselect-option input[type='checkbox'] {
-//   margin-right: 10px;
-// }
-
-// .multiselect-option label {
-//   margin-bottom: 0;
-// }
-
 .multiselect.active .multiselect-options {
-  display: block;
+  display: flex;
 }

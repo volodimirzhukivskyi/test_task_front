@@ -2,6 +2,8 @@
   padding-top: 32px;
   @include _992 {
     display: flex;
+    max-width: 1360px;
+    margin: 0 auto;
   }
   &_title {
     font-family: $third-family;
@@ -9,14 +11,21 @@
     font-size: 32px;
     line-height: 100%;
     color: #042a30;
+    @include _992 {
+      display: none;
+    }
     &-hide {
       display: none;
+      @include _992 {
+        display: block;
+      }
     }
   }
 
   &_item {
     @include _992 {
       flex: 1;
+      max-width: 94%;
     }
   }
 }

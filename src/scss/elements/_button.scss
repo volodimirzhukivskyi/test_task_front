@@ -1,4 +1,4 @@
-.button{
+.button {
   padding: 14px 0 11px;
   min-width: 189px;
   font-weight: 700;
@@ -9,13 +9,13 @@
   text-transform: uppercase;
   border-radius: 20px;
   border: none;
-  background: radial-gradient(50% 50% at 50% 50%, #FFC700 0%, #FFC700 100%);
- &--white{
-   min-width: 200px;
-    border: 1px solid #FFFFFF;
-   background: none;
-   color: white;
- }
+  background: radial-gradient(50% 50% at 50% 50%, #ffc700 0%, #ffc700 100%);
+  &--white {
+    min-width: 200px;
+    border: 1px solid #ffffff;
+    background: none;
+    color: white;
+  }
   &__circle {
     width: 16px;
     height: 16px;
@@ -26,10 +26,29 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 3px;
-  } &__circle:after {
-    content: url("../img/general_page/icon.png");
   }
+  &__circle:after {
+    content: url('../img/general_page/icon.png');
+  }
+}
 
-
-
+.button_action {
+  border-radius: 8px;
+  padding: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  min-height: 44px;
+  min-width: 44px;
+  background: $btnBackground;
+  transition: 0.3s;
+  &:hover {
+    background: $btnProductHover;
+    transition: 0.3s;
+  }
+  &-next {
+  }
+  &-prev {
+  }
 }

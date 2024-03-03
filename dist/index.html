@@ -20,7 +20,7 @@
       </header>
       <main>
 
-        <section class="single">
+        <section class="single ">
   <div class="single_item">
     <div class="container">
       <div class="breadcrumbs">
@@ -39,12 +39,18 @@
       <div class="swiper-slide"><img src="./img/products/slide-three.png" alt="" /></div>
       <div class="swiper-slide"><img src="./img/products/slide-four.png" alt="" /></div>
       <div class="swiper-slide"><img src="./img/products/slide-five.png" alt="" /></div>
-    </div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-  </div>
 
-  <div class="swiper- product-thumbs">
+
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="product-left_wrapper">
+      <button class="swiper-button-prev button_action"></button>
+      <button class="swiper-button-next button_action"></button>
+
+    </div>
+  </div>
+<!-- product-slider    -->
+  <div class="swiper product-thumbs ">
     <div class="swiper-wrapper">
       <div class="swiper-slide"><img src="./img/products/slide-one.png" alt="" /></div>
       <div class="swiper-slide"><img src="./img/products/slide-two.png" alt="" /></div>
@@ -52,8 +58,8 @@
       <div class="swiper-slide"><img src="./img/products/slide-four.png" alt="" /></div>
       <div class="swiper-slide"><img src="./img/products/slide-five.png" alt="" /></div>
     </div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
+    <button class="swiper-button-next button_action"></button>
+    <button class="swiper-button-prev button_action"></button>
   </div>
 </div>
 
@@ -61,10 +67,13 @@
   <div class="single_item single_item-second">
     <h1 class="single_title single_title-hide">Incline & Decline Conveyors</h1>
     <form class="form" action="">
-  <div class="container">
-    <!-- radio bnts -->
+
+
+  <div class="form_container">
     <fieldset class="form_wrapper">
-      <legend>Conveyor Belt Width, in</legend>
+      <legend>Conveyor Belt Width, in   <p class="form_info-container"><span class="info-banner">
+Flexible gravity roller conveyors are ideal for maneuvering . 
+</span></p></legend>
       <div class="radio-buttons">
         <input type="radio" id="size-10" name="size" value="10" checked />
         <label for="size-10">10"</label>
@@ -96,19 +105,23 @@
     </fieldset>
     <div class="selects-wrapper">
       <fieldset class="form_wrapper">
-        <legend>Bed Section Length, in</legend>
+        <legend>Bed Section Length, in <p class="form_info-container"><span class="info-banner">
+Flexible gravity roller conveyors are ideal for maneuvering . 
+</span></p></legend>
         <div class="size_counter counter">
           <button type="button" class="counter-decrement" data-action="counter-decrement">
             <img src="./img/icons/left_arrow-m.svg" alt="" />
           </button>
-          <input type="number" data-value="counter-value" value="10" />
+          <input disabled type="text" data-value="counter-value" value="10" />
           <button type="button" data-action="counter-increment">
             <img src="./img/icons/right_arrow-m.svg" alt="" />
           </button>
         </div>
       </fieldset>
-      <fieldset>
-        <legend>Additional options</legend>
+      <fieldset class="optios_wapper">
+        <legend>Additional options <p class="form_info-container"><span class="info-banner">
+Flexible gravity roller conveyors are ideal for maneuvering . 
+</span></p></legend>
         <div class="multiselect">
   <button class="multiselect-button">
     Select options
@@ -116,40 +129,54 @@
   </button>
   <ul class="list multiselect-options">
     <li class="custom-checkbox multiselect-option">
-    <input type="checkbox" id=Chain class="checkbox-input" />
-    <label for=Chain class="checkbox-label">
+    <input type="checkbox" id=chain class="checkbox-input" />
+    <label for=chain class="checkbox-label">
      Chain Driven Feeder
+     <p class="form_info-container"><span class="info-banner">
+Flexible gravity roller conveyors are ideal for maneuvering . 
+</span></p>
     </label>
   </li>
     <li class="custom-checkbox multiselect-option">
-    <input type="checkbox" id=Knee class="checkbox-input" />
-    <label for=Knee class="checkbox-label">
+    <input type="checkbox" id=knee class="checkbox-input" />
+    <label for=knee class="checkbox-label">
      Knee Braces
+     <p class="form_info-container"><span class="info-banner">
+Flexible gravity roller conveyors are ideal for maneuvering . 
+</span></p>
     </label>
   </li>
     <li class="custom-checkbox multiselect-option">
-    <input type="checkbox" id=ChainDriven class="checkbox-input" />
-    <label for=ChainDriven class="checkbox-label">
+    <input type="checkbox" id=test class="checkbox-input" />
+    <label for=test class="checkbox-label">
      ChainDriven Feeder
+     <p class="form_info-container"><span class="info-banner">
+Flexible gravity roller conveyors are ideal for maneuvering . 
+</span></p>
     </label>
   </li>
     <li class="custom-checkbox multiselect-option">
-    <input type="checkbox" id=Enhanced class="checkbox-input" />
-    <label for=Enhanced class="checkbox-label">
+    <input type="checkbox" id=enhanced class="checkbox-input" />
+    <label for=enhanced class="checkbox-label">
      Enhanced support
+     <p class="form_info-container"><span class="info-banner">
+Flexible gravity roller conveyors are ideal for maneuvering . 
+</span></p>
     </label>
   </li>
+
   </ul>
+
 </div>
 
       </fieldset>
     </div>
   </div>
-  <fieldset class="product_card container">
+  <fieldset  class="product_card container">
     <div class="product_info">
       <div class="prduct_info-wrapper">
         <p class="product_sku">SKU: <span class="product_sku_code">WMD-2446F-GRYI</span></p>
-        <div class="product_wrapper"><button class="product_button">Upon request</button> <a class="product_rating"> (20) </a></div>
+        <div class="product_wrapper"><button class="product_button">Upon request</button> <a class="product_rating"> (20) <span class="product_rating-hide-text">read</span></a></div>
       </div>
       <hr class="product_separator" />
       <div class="prduct_info-wrapper">
@@ -158,7 +185,7 @@
 
         <div class="product_counter counter">
           <button type="button" class="counter-decrement" data-action="counter-decrement"></button>
-          <input type="number" data-value="counter-value" value="10" />
+          <input disabled type="text" data-value="counter-value" value="10" />
           <button type="button" data-action="counter-increment"><div class="counter_plus-container"></div></button>
         </div>
 

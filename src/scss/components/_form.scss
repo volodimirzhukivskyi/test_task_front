@@ -1,6 +1,34 @@
 .form {
   @include _992 {
     display: flex;
+    gap: 44px;
+    & > div {
+      flex: 1;
+    }
+  }
+  &_container {
+    padding: 0 20px;
+    @include _992 {
+      padding: 0;
+    }
+  }
+  &_info-container {
+    margin: 0;
+    position: relative;
+    &:hover .info-banner {
+      display: block;
+    }
+    & .info-banner {
+      left: 50%;
+      bottom: 130%;
+      transform: translate(-50%, 0);
+      margin: auto;
+    }
+    &:after {
+      content: url('../img/icons/info.svg');
+      display: inline-block;
+      margin-left: 8px;
+    }
   }
   &_wrapper {
     margin-bottom: 32px;
@@ -21,17 +49,20 @@
     color: #292e2f;
     margin-bottom: 8px;
 
-    &:after {
-      content: url('../img/icons/info.svg');
-      display: inline-block;
-      margin-left: 8px;
-    }
+    // &:after {
+    //   content: url('../img/icons/info.svg');
+    //   display: inline-block;
+    //   margin-left: 8px;
+    // }
   }
 }
 .radio-buttons {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 16px;
+  @include _992 {
+    gap: 12px;
+  }
 }
 .radio-buttons_wrapper {
   margin-bottom: 32px;
@@ -41,6 +72,7 @@
   gap: 10px;
   flex-wrap: wrap;
   justify-content: center;
+  margin-bottom: 40px;
 }
 .radio-buttons input {
   display: none;
@@ -87,6 +119,9 @@
 //   othe components
 /* style.css */
 /* Картка продукту */
+.product_checkboxs {
+  padding: 0;
+}
 .product_card {
   display: flex;
   flex-direction: column;
@@ -95,9 +130,13 @@
   margin-bottom: 20px;
   background: #f2f5f5;
   border-radius: 8px;
-  padding: 0 20px;
-}
 
+  flex: 1;
+  align-self: start;
+}
+.product_info {
+  padding: 20px 0;
+}
 /* Зображення продукту */
 .product_image {
   width: 100%;
@@ -113,6 +152,7 @@
 
 /* SKU продукту */
 .product_sku {
+  margin: 0 0 20px;
   font-family: $font-family;
   font-weight: 600;
   font-size: 12px;
@@ -173,6 +213,24 @@
   font-size: 14px;
   line-height: 100%;
   text-transform: uppercase;
+  @include _992 {
+    grid-row: 2;
+    grid-column: span 2;
+    grid-template-columns: auto auto 1fr auto;
+  }
+  &-hide-text {
+    display: none;
+    @include _992 {
+      display: block;
+      text-align: right;
+      font-family: $third-family;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 100%;
+      text-transform: uppercase;
+      color: #042a30;
+    }
+  }
   &:before {
     content: '★★★★★';
     color: inherit;
@@ -257,14 +315,6 @@
   text-align: center;
 }
 
-// .product_action button {
-//   width: 100%;
-//   padding: 10px;
-//   border: 1px solid #ddd;
-//   border-radius: 4px;
-//   background-color: #000;
-//   color: red;
-// }
 .product_submit {
   border-radius: 8px;
   padding: 14px 40px;
@@ -285,4 +335,12 @@
 .prduct_info-wrapper {
   max-width: 360px;
   margin: 0 auto;
+  // @include _992 {
+  padding: 0 20px;
+  // }
+}
+.optios_wapper {
+  @include _992 {
+    width: 100%;
+  }
 }

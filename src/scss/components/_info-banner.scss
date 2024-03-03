@@ -1,0 +1,16 @@
+.info-banner {
+  border-radius: 8px;
+  padding: 16px;
+  width: 168px;
+  min-height: 100px;
+  font-family: $font-family;
+  font-weight: 300;
+  font-size: 11px;
+  line-height: 130%;
+  color: #292e2f;
+  position: absolute;
+  background: $white;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.12);
+  z-index: 1;
+  display: none;
+}
